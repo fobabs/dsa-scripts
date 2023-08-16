@@ -17,4 +17,4 @@ Contributions are always welcome!
 
 ## Feedback
 
-If you have any feedback, please reach out to us at hi@fobabs.com
+If you have any feedback, please reach out to us at [hi@fobabs.co](mailto:hi@fobabs.co).
