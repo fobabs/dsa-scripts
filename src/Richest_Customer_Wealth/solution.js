@@ -1,7 +1,7 @@
 /**
  * Returns the wealth that the richest customer has
- * @param {number[]} accounts
- * @returns {num} - Returns a number
+ * @param {number[][]} accounts
+ * @returns {number} - Returns a number
  */
 // Recursive Method
 const maximumWealth = (accounts) => {
