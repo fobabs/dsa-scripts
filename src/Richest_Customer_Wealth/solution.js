@@ -16,6 +16,15 @@ const maximumWealth = (accounts) => {
   return richestCustomer;
 };
 
+// Functional Programming method using map and reduce
+// const maximumWealth = (accounts) => {
+//   return Math.max(
+//     ...accounts.map((account) => {
+//       return account.reduce((prev, curr) => prev + curr, 0);
+//     })
+//   );
+// };
+
 // console.log(
 //   maximumWealth([
 //     [1, 2, 3],
