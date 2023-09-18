@@ -14,7 +14,7 @@
 const sortedSquares = (nums: number[]): number[] => {
   let resultArr: number[] = []
   for (let i = 0; i < nums.length; i++) {
-    // resultArr[i] = Math.pow(nums[i], 2)
+    // const squaredElement = Math.pow(nums[i], 2)
     const squaredElement = nums[i] * nums[i]
     // Locate the right position to insert the squared element into the resultArr array
     let index = 0
