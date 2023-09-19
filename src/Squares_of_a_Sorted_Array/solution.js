@@ -9,7 +9,7 @@
 //   return newArray.sort((a, b) => a - b);
 // };
 
-// Imperative method - For & while loop (faster method)
+// Imperative method - For & while loop
 const sortedSquares = (nums) => {
   let resultArr = [];
   for (let i = 0; i < nums.length; i++) {
