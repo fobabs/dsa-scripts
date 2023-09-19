@@ -17,7 +17,7 @@
 //   return richestCustomer
 // }
 
-// Declarative method (map and reduce) - Higher speed
+// Declarative method (map and reduce)
 const maximumWealth = (accounts: number[][]): number => {
   return Math.max(...accounts.map(account => (
     account.reduce((prev, curr) => prev + curr, 0)
