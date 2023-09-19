@@ -19,7 +19,7 @@
 //   return count
 // }
 
-//for loop (Higher speed)
+//for loop
 const numberOfSteps = (num: number): number => {
   let count = 0
   for (let i = num; i > 0;) {
