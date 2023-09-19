@@ -1,0 +1,10 @@
+// This file was created to handle all *.ts files.
+// This will make TypeScript treat every file as a module
+
+{
+  "compilerOptions": {
+    "moduleDetection": "force",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true
+  }
+}

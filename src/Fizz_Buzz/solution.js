@@ -1,7 +1,7 @@
 /**
  * Returns an array of string
  * @param {number} n
- * @param {string[]}
+ * @return {string[]}
  */
 
 // Imperative Method

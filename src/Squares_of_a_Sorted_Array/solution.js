@@ -3,11 +3,24 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-// Functional programming method using map and sort
+// Declarative method - Functional programming method using map and sort
+// const sortedSquares = (nums) => {
+//   let newArray = nums.map((num) => num ** 2);
+//   return newArray.sort((a, b) => a - b);
+// };
+
+// Imperative method - For & while loop
 const sortedSquares = (nums) => {
-  let newArray = nums.map((num) => num ** 2);
-  newArray.sort((a, b) => a - b);
-  return newArray;
+  let resultArr = [];
+  for (let i = 0; i < nums.length; i++) {
+    const squaredElement = nums[i] * nums[i];
+    let index = 0;
+    while (index < resultArr.length && squaredElement > resultArr[index]) {
+      index++;
+    }
+    resultArr.splice(index, 0, squaredElement);
+  }
+  return resultArr;
 };
 
 // console.log(sortedSquares([-4, -1, 0, 3, 10]));
