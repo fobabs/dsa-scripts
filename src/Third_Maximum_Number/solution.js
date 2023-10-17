@@ -19,21 +19,35 @@
 // };
 
 // Using for loop method
+// const thirdMax = (nums) => {
+//   let first = -Infinity;
+//   let second = -Infinity;
+//   let third = -Infinity;
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] === first || nums[i] === second || nums[i] === third) continue;
+//     if (nums[i] > first) {
+//       [first, second, third] = [nums[i], first, second];
+//     } else if (nums[i] > second) {
+//       [second, third] = [nums[i], second];
+//     } else if (nums[i] > third) {
+//       third = nums[i];
+//     }
+//   }
+//   return third === -Infinity ? first : third;
+// };
+
+// Using Set
 const thirdMax = (nums) => {
-  let first = -Infinity;
-  let second = -Infinity;
-  let third = -Infinity;
+  // Remove all duplicates in the array
+  const distinctNums = [...new Set(nums)];
+  distinctNums.sort((a, b) => b - a);
   for (let i = 0; i < nums.length; i++) {
-    if (nums[i] === first || nums[i] === second || nums[i] === third) continue;
-    if (nums[i] > first) {
-      [first, second, third] = [nums[i], first, second];
-    } else if (nums[i] > second) {
-      [second, third] = [nums[i], third];
-    } else if (nums[i] > third) {
-      third = nums[i];
+    if (distinctNums.length < 3) {
+      return distinctNums.at(0);
+    } else {
+      return distinctNums.at(2);
     }
   }
-  return third === -Infinity ? first : third;
 };
 
 // console.log(thirdMax([3, 2, 1]));
