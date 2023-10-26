@@ -20,10 +20,11 @@ The judge will test your solution with the following code:
 > assert k == expectedNums.length;\
 > for (int i = 0; i < k; i++) {\
 &ensp; &nbsp; &nbsp; assert nums[i] == expectedNums[i];\
-> }\
+> }
 
 If all assertions pass, then your solution will be **accepted**.
 
+\
 **Example 1:**
 
 > **Input:** nums = [1,1,2]\
