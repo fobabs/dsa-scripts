@@ -5,6 +5,8 @@
   "compilerOptions": {
     "moduleDetection": "force",
     "forceConsistentCasingInFileNames": true,
-    "strict": true
-  }
+    "strict": true,
+    "target": "es2015"
+  },
+
 }
