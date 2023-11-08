@@ -41,13 +41,8 @@ const thirdMax = (nums) => {
   // Remove all duplicates in the array
   const distinctNums = [...new Set(nums)];
   distinctNums.sort((a, b) => b - a);
-  for (let i = 0; i < nums.length; i++) {
-    if (distinctNums.length < 3) {
-      return distinctNums.at(0);
-    } else {
-      return distinctNums.at(2);
-    }
-  }
+
+  return distinctNums.length < 3 ? distinctNums.at(0) : distinctNums.at(2);
 };
 
 // console.log(thirdMax([3, 2, 1]));

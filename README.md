@@ -2,9 +2,9 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-This contains solutions to some DSA problems in JavaScript.
+This contains solutions to some DSA problems in JavaScript and Typescript.
 
-- If you like the project, give it a star. It means a lot to me.
+- If you like the project, kindly give it a star. It means a lot to me.
 
 ## Contributing
 
