@@ -8,7 +8,7 @@ const sortColors = (nums: number[]): void => {
   for (let i = 0; i <= n; i++) {
     if (nums[i] === 0) {
       [nums[i], nums[initIndex++]] = [nums[initIndex], nums[i]]
-    } else if (nums[i] == 2) {
+    } else if (nums[i] === 2) {
       [nums[i--], nums[n--]] = [nums[n], nums[i]]
     }
   }
