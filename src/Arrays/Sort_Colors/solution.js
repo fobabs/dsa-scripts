@@ -9,7 +9,7 @@ const sortColors = (nums) => {
     if (nums[i] === 0) {
       [nums[i], nums[initIndex]] = [nums[initIndex], nums[i]];
       initIndex++;
-    } else if (nums[i] == 2) {
+    } else if (nums[i] === 2) {
       [nums[i--], nums[n--]] = [nums[n], nums[i]];
     }
   }
