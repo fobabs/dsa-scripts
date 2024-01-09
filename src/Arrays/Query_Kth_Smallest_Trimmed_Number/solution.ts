@@ -40,5 +40,5 @@ const smallestTrimmedNumbers = (nums: string[], queries: number[][]): number[] =
     return answer
 }
 
-console.log(smallestTrimmedNumbers(["102","473","251","814"], [[1,1],[2,3],[4,2],[1,2]]));
-console.log(smallestTrimmedNumbers(["24","37","96","04"], [[2,1],[2,2]]));
+// console.log(smallestTrimmedNumbers(["102","473","251","814"], [[1,1],[2,3],[4,2],[1,2]]));
+// console.log(smallestTrimmedNumbers(["24","37","96","04"], [[2,1],[2,2]]));
