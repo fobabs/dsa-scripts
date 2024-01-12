@@ -9,35 +9,23 @@ const smallestTrimmedNumbers = (nums, queries) => {
 
     // for (let i = 0; i < queries.length; i++) {
     //   const [k, trim] = queries[i];
-    //   const trimmedNums = nums.map(num => parseInt(num.slice(-trim))); // Trim each number to 'trim' rightmost digits
-    //   const indices = Array.from({ length: nums.length }, (_, i) => i); // Create an array of indices
-      
-    //   // Sort indices based on the trimmed numbers and original indices
-    //   indices.sort((a, b) => {
-    //     if (trimmedNums[a] !== trimmedNums[b]) {
-    //       return trimmedNums[a] - trimmedNums[b];
-    //     } else {
-    //       return a - b; // If the trimmed numbers are equal, compare original indices
-    //     }
-    //   });
+    //   let trimmedNums = nums.map((num, i) => [num.slice(num.length - trim), i]); // trim the last digit process
 
-    //   answer.push(indices[k - 1]); // Push the k-th smallest index after sorting
+    //   trimmedNums.sort((a, b) => {
+    //     if (a[0] === b[0]) return a[1] - b[1]; // number equal, lower index is considered to be smaller
+    //     return a[0].localeCompare(b[0]); // sort by number increasing in string format
+    //   })   
+    //   answer.push(trimmedNums[k - 1][1]);
     // }
 
-    for (let [k, trim] of queries) {
-      const trimmedNums = nums.map(num => parseInt(num.slice(-trim))) // Trim each number to 'trim' rightmost digits
-      const indices = Array.from({ length: nums.length }, (_, i) => i) // Create an array of indices
+    for (const [k, trim] of queries) {
+      let trimmedNums = nums.map((num, i) => [num.slice(num.length - trim), i]); // trim the last digit process
 
-      // sort indices based on the trimmed numbers nd original indices
-      indices.sort((a, b) => {
-        if (trimmedNums[a] !== trimmedNums[b]) {
-          return trimmedNums[a] - trimmedNums[b]
-        } else {
-          return a - b // if the trimmed numbers are equal, compare original indices
-        }
-      })
-      
-      answer.push(indices[k - 1]) // Push the k-th smallest index after sorting
+      trimmedNums.sort((a, b) => {
+        if (a[0] === b[0]) return a[1] - b[1]; // number equal, lower index is considered to be smaller
+        return a[0].localeCompare(b[0]); // sort by number increasing in string format
+      })   
+      answer.push(trimmedNums[k - 1][1]);
     }
 
     return answer;
