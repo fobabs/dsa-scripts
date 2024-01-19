@@ -16,7 +16,7 @@ const maximumGap = (nums) => {
     let maxVal = Math.max(...nums);
 
     // Calculate the minimum possible gap
-    let minGap = Math.min(1, Math.floor((maxVal - minVal) / (n - 1)));
+    let minGap = Math.max(1, Math.floor((maxVal - minVal) / (n - 1)));
 
     // Calculate the number of buckets needed
     let numBuckets = Math.floor((maxVal - minVal) / minGap) + 1;
@@ -26,6 +26,10 @@ const maximumGap = (nums) => {
       min: Infinity,
       max: -Infinity
     }));
+    // let buckets = new Array(numBuckets).fill(null).map(() => ({
+    //   min: Infinity,
+    //   max: -Infinity
+    // }));
 
     // Distribute elements into buckets
     for (let num of nums) {
