@@ -49,5 +49,5 @@ const maximumGap = (nums: number[]): number => {
     return maxGap
 }
 
-console.log(maximumGap([3,6,9,1]))
-console.log(maximumGap([10]))
+// console.log(maximumGap([3,6,9,1]))
+// console.log(maximumGap([10]))
