@@ -119,5 +119,5 @@ const topKFrequent = (nums: number[], k: number): number[] => {
   return result
 }
 
-console.log(topKFrequent([1,1,1,2,2,3], 2))
-console.log(topKFrequent([1], 1))
+// console.log(topKFrequent([1,1,1,2,2,3], 2))
+// console.log(topKFrequent([1], 1))
