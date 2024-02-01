@@ -84,31 +84,31 @@ class MinHeap {
 }
 
 const topKFrequent = (nums, k) => {
-    const frequencyMap = new Map();
+  const frequencyMap = new Map();
 
-    // Count the frequency of each element
-    for (const num of nums) {
-      frequencyMap.set(num, (frequencyMap.get(num) || 0) + 1);
+  // Count the frequency of each element
+  for (const num of nums) {
+    frequencyMap.set(num, (frequencyMap.get(num) || 0) + 1);
+  }
+
+  // Create a min heap based on the frequency
+  const minHeap = new MinHeap();
+  for (const [num, frequency] of frequencyMap) {
+    minHeap.insert({ num, frequency });
+
+    // If the heap size exceed sk, remove the element with the smallest frequency
+    if (minHeap.heap.length > k) {
+      minHeap.extractMin();
     }
+  }
 
-    // Create a min heap based on the frequency
-    const minHeap = new MinHeap();
-    for (const [num, frequency] of frequencyMap) {
-      minHeap.insert({ num, frequency });
+  // Extract the top k frequent elements from the heap
+  const result = [];
+  while (!minHeap.isEmpty()) {
+    result.unshift(minHeap.extractMin().num);
+  }
 
-      // If the heap size exceed sk, remove the element with the smallest frequency
-      if (minHeap.heap.length > k) {
-        minHeap.extractMin();
-      }
-    }
-
-    // Extract the top k frequent elements from the heap
-    const result = [];
-    while (!minHeap.isEmpty()) {
-      result.unshift(minHeap.extractMin().num);
-    }
-
-    return result;
+  return result;
 };
 
 // console.log(topKFrequent(nums = [1,1,1,2,2,3], k = 2));
