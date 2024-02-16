@@ -1,0 +1,27 @@
+name: Auto Assign Issues to Myself
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  assign-to-self:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if issue needs to be assigned
+        id: check
+        run: |
+          issue_author=$(jq -r '.issue.user.login' "$GITHUB_EVENT_PATH")
+          if [[ "$GITHUB_ACTOR" != "$issue_author" ]]; then
+            echo "::set-output name=assignee::$GITHUB_ACTOR"
+          else
+            echo "::set-output name=assignee::"
+          fi
+
+      - name: Assign the issue to myself
+        if: steps.check.outputs.assignee != ''
+        run: |
+          assignee="${{ steps.check.outputs.assignee }}"
+          echo "Assigning issue to $assignee"
+          gh issue assign $assignee ${{ github.event.issue.number }}
