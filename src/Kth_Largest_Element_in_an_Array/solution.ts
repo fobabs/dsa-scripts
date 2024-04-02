@@ -82,7 +82,7 @@ class MinHeap {
   }
 }
 
-const findKthLargest = (nums: number[], k: number) => {
+const findKthLargest = (nums: number[], k: number): number | null => {
   const minHeap = new MinHeap()
 
   for (let i = 0; i < nums.length; i++) {
