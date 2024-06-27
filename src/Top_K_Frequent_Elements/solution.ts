@@ -78,7 +78,7 @@ class MinHeap<T> {
     }
   }
 
-  swap(i: number, j: number): void {
+  private swap(i: number, j: number): void {
     const temp = this.heap[i]
     this.heap[i] = this.heap[j]
     this.heap[j] = temp
