@@ -104,7 +104,7 @@ const topKFrequent = (nums: number[], k: number): number[] => {
   for (const [num, frequency] of frequencyMap) {
     minHeap.insert({ num, frequency })
 
-    // If the heap size exceed sk, remove the element with the smallest frequency
+    // If the heap size exceeds k, remove the element with the smallest frequency
     if (minHeap.heap.length > k) {
       minHeap.extractMin()
     }
