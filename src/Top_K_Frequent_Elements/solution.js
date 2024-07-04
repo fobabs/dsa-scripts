@@ -57,14 +57,19 @@ class MinHeap {
       const rightChildIndex = 2 * index + 2;
       let smallestIndex = index;
 
-      if (leftChildIndex < this.heap.length && this.heap[leftChildIndex].frequency < 
-        this.heap[smallestIndex].frequency) {
-          smallestIndex = leftChildIndex;
+      if (
+        leftChildIndex < this.heap.length &&
+        this.heap[leftChildIndex].frequency < this.heap[smallestIndex].frequency
+      ) {
+        smallestIndex = leftChildIndex;
       }
 
-      if (rightChildIndex < this.heap.length && this.heap[rightChildIndex].frequency < 
-        this.heap[smallestIndex].frequency) {
-          smallestIndex = rightChildIndex;
+      if (
+        rightChildIndex < this.heap.length &&
+        this.heap[rightChildIndex].frequency <
+          this.heap[smallestIndex].frequency
+      ) {
+        smallestIndex = rightChildIndex;
       }
 
       if (smallestIndex !== index) {
@@ -96,7 +101,7 @@ const topKFrequent = (nums, k) => {
   for (const [num, frequency] of frequencyMap) {
     minHeap.insert({ num, frequency });
 
-    // If the heap size exceed sk, remove the element with the smallest frequency
+    // If the heap size exceeds k, remove the element with the smallest frequency
     if (minHeap.heap.length > k) {
       minHeap.extractMin();
     }
