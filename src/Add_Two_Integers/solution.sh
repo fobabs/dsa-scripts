@@ -1,8 +1,13 @@
 #!/bin/bash
 
-num1=$1
-num2=$2
+sum() {
+    local num1=$1
+    local num2=$2
 
-sum=$((num1 + num2))
+    local sum=$((num1 + num2))
 
-echo $sum
+    echo $sum
+}
+
+# echo "$(sum 12 5)"
+# echo "$(sum 10 4)"
