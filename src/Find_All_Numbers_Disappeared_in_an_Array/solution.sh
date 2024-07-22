@@ -27,5 +27,5 @@ findDisappearedNumbers() {
     echo "${result[@]}"
 }
 
-echo $(findDisappearedNumbers 4 2 7 8 2 3 1)
-echo $(findDisappearedNumbers 1 1)
+# echo $(findDisappearedNumbers 4 2 7 8 2 3 1)
+# echo $(findDisappearedNumbers 1 1)
