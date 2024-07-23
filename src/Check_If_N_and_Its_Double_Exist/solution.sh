@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 checkIfExist() {
     local arr=("$@")
