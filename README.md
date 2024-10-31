@@ -2,7 +2,7 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-This contains solutions to some DSA problems in JavaScript, Typescript, Python and Bash.
+This contains solutions to some DSA problems in JavaScript, Typescript, Python, Rust and Bash.
 
 - If you like the project, kindly give it a star. It means a lot to me.
 
